@@ -19,8 +19,16 @@ android {
 
 }
 
+ext {
+    ARTIFACT_ID = 'BasePopup-Extension'
+    ARTIFACT_CANDY_ID = 'BasePopup-Extension-Candy'
+    IGNORE_DEPENDENCE = false
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
+
+apply from: "$rootProject.rootDir/scripts/upload.gradle"

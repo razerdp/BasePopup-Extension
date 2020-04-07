@@ -53,5 +53,5 @@ ext {
     group = 'com.github.razerdp'
 
     pkg_name = 'BasePopup-Extension'
-    pkg_candy_name = 'BasePopup-Extension:Candy'
+    pkg_candy_name = 'BasePopup-Extension-Candy'
 }
