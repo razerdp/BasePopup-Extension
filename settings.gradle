@@ -1,0 +1,3 @@
+rootProject.name='BasePopup-Extension'
+include ':app'
+include ':lib'
