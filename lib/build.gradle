@@ -26,9 +26,8 @@ ext {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    compileOnly 'androidx.appcompat:appcompat:1.1.0'
+    compileOnly 'com.github.razerdp:BasePopup_Candy:2.2.3.20200406'
 }
 
 apply from: "$rootProject.rootDir/scripts/upload.gradle"

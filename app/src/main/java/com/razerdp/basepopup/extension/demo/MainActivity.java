@@ -2,8 +2,6 @@ package com.razerdp.basepopup.extension.demo;
 
 import android.os.Bundle;
 
-import com.razerdp.basepopup.extension.R;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
