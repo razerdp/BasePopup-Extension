@@ -6,15 +6,35 @@ import android.view.View;
  * Created by 大灯泡 on 2020/4/8.
  */
 public interface AlertInterface {
-    int BUTTON_POSITIVE = -1;
-    int BUTTON_NEGATIVE = -2;
-    int BUTTON_NEUTRAL = -3;
-
     abstract class OnClickListener {
-        abstract void onPositiveClick(View v);
+        /**
+         * 防止被子类重写，导致无法分发到指定方法
+         */
+        final void onAlertButtonClickInternal(@AlertParams.ButtonMode int mode, View v) {
+            onAlertButtonClick(mode, v);
+            switch (mode) {
+                case AlertParams.MODE_POSITIVE:
+                    onPositiveClick(v);
+                    break;
+                case AlertParams.MODE_NEUTRAL:
+                    onNeutralClick(v);
+                    break;
+                case AlertParams.MODE_NEGATIVE:
+                    onNegativeClick(v);
+                    break;
+            }
+        }
 
-        abstract void onNegativeClick(View v);
+        public void onAlertButtonClick(@AlertParams.ButtonMode int mode, View v) {
+        }
 
-        abstract void onNeutralClick(View v);
+        public void onPositiveClick(View v) {
+        }
+
+        public void onNegativeClick(View v) {
+        }
+
+        public void onNeutralClick(View v) {
+        }
     }
 }

@@ -1,16 +1,17 @@
 package com.razerdp.basepopup.extension;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
-import razerdp.basepopup.BasePopupWindow;
 
 /**
  * Created by 大灯泡 on 2020/4/8.
  * BasePopup扩展Adapter
  */
-public class BasePopupWindowExtensionAdapter<P extends BasePopupWindow> {
+public abstract class BasePopupWindowExtensionAdapter<P extends BasePopupWindowExtension> {
 
     private P mPopupWindow;
 
@@ -26,8 +27,11 @@ public class BasePopupWindowExtensionAdapter<P extends BasePopupWindow> {
     /**
      * 返回您的ContentView
      */
-    View onCreateContentView(ViewGroup parent) {
-        return null;
+    protected abstract View onCreateContentView(ViewGroup parent);
+
+
+    protected View inflateView(ViewGroup parent, @LayoutRes int layoutId) {
+        return LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);
     }
 
     public P getPopupWindow() {

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/be_alert_ios_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@id/be_alert_ios_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="先乱写，后面再查询具体的值" />
+
+    <TextView
+        android:id="@id/be_alert_ios_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="1.5dp"
+        android:lineSpacingMultiplier="1.5"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        tools:text="先乱写，后面再查询具体的值\n先乱写，后面再查询具体的值\n先乱写，后面再查询具体的值" />
+
+    <View
+        style="@style/divider_horizontal"
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/be_vertical_divider"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@id/be_alert_ios_btn_negative"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@color/be_alert_ios_positive_text_color"
+            android:textSize="14sp"
+            tools:text="确定" />
+
+        <TextView
+            android:id="@id/be_alert_ios_btn_neutral"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@color/be_alert_ios_positive_text_color"
+            android:textSize="14sp"
+            tools:text="中立" />
+
+
+        <TextView
+            android:id="@id/be_alert_ios_btn_positive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textColor="@color/be_alert_ios_positive_text_color"
+            android:textSize="14sp"
+            tools:text="取消" />
+    </LinearLayout>
+
+
+</LinearLayout>

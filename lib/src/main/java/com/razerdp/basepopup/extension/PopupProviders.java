@@ -1,7 +1,11 @@
 package com.razerdp.basepopup.extension;
 
-import androidx.annotation.NonNull;
-import razerdp.basepopup.BasePopupWindow;
+import android.app.Dialog;
+import android.content.Context;
+
+import com.razerdp.basepopup.extension.alert.AlertParams;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * Created by 大灯泡 on 2020/4/8.
@@ -10,11 +14,15 @@ import razerdp.basepopup.BasePopupWindow;
  */
 public class PopupProviders {
 
-    public interface Factory {
-        @NonNull
-        <T extends BasePopupWindow> T create(@NonNull Object parentToken, @NonNull Class<T> popupClass);
+    public static AlertParams alert(Context windowParent) {
+        return new AlertParams(windowParent);
     }
 
+    public static AlertParams alert(Fragment windowParent) {
+        return new AlertParams(windowParent);
+    }
 
-
+    public static AlertParams alert(Dialog windowParent) {
+        return new AlertParams(windowParent);
+    }
 }
