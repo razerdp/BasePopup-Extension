@@ -1,12 +1,14 @@
 package com.razerdp.basepopup.extension;
 
+import android.animation.Animator;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+import android.view.animation.Animation;
 
-import com.razerdp.basepopup.extension.utils.ViewUtil;
+import com.razerdp.basepopup.extension.utils.ViewUtils;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -42,6 +44,33 @@ public abstract class BasePopupWindowExtension<P extends ExtensionParams> extend
         onParamViewCreate(mExtensionParams);
     }
 
+
+    @Override
+    protected Animation onCreateShowAnimation(int width, int height) {
+        return mExtensionParams.getExtensionAdapter().onCreateShowAnimation(width, height);
+    }
+
+    @Override
+    protected Animator onCreateShowAnimator(int width, int height) {
+        return mExtensionParams.getExtensionAdapter().onCreateShowAnimator(width, height);
+    }
+
+    @Override
+    protected Animation onCreateDismissAnimation(int width, int height) {
+        return mExtensionParams.getExtensionAdapter().onCreateDismissAnimation(width, height);
+    }
+
+    @Override
+    protected Animator onCreateDismissAnimator(int width, int height) {
+        return mExtensionParams.getExtensionAdapter().onCreateDismissAnimator(width, height);
+    }
+
+    @Override
+    protected boolean onPreShow() {
+        mExtensionParams.getExtensionAdapter().onPreShow();
+        return true;
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -52,16 +81,13 @@ public abstract class BasePopupWindowExtension<P extends ExtensionParams> extend
     }
 
     protected void onParamViewCreate(@NonNull ExtensionParams params) {
-        params.getExtensionAdapter().onAttachPopupWindow(this);
+        params.getExtensionAdapter().attachPopupWindow(this);
         ViewGroup vg = (ViewGroup) getContentView();
         View v = params.getExtensionAdapter().onCreateContentView(vg);
         ViewParent parent = v.getParent();
         if (parent != vg) {
-            vg.addView(ViewUtil.removeFromParent(v, true));
+            vg.addView(ViewUtils.removeFromParent(v, true));
         }
     }
 
-    public P asParams() {
-        return mExtensionParams;
-    }
 }

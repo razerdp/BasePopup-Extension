@@ -1,8 +1,10 @@
 package com.razerdp.basepopup.extension;
 
+import android.animation.Animator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
@@ -14,8 +16,9 @@ import androidx.annotation.NonNull;
 public abstract class BasePopupWindowExtensionAdapter<P extends BasePopupWindowExtension> {
 
     private P mPopupWindow;
+    private ExtensionParams.DefaultConfig defaultConfig;
 
-    public final void attachPopupWindow(@NonNull P basePopupWindow) {
+    final void attachPopupWindow(@NonNull P basePopupWindow) {
         this.mPopupWindow = basePopupWindow;
         onAttachPopupWindow(basePopupWindow);
     }
@@ -29,6 +32,26 @@ public abstract class BasePopupWindowExtensionAdapter<P extends BasePopupWindowE
      */
     protected abstract View onCreateContentView(ViewGroup parent);
 
+    /**
+     * preShow
+     */
+    protected abstract void onPreShow();
+
+    protected Animation onCreateShowAnimation(int width, int height) {
+        return null;
+    }
+
+    protected Animator onCreateShowAnimator(int width, int height) {
+        return null;
+    }
+
+    protected Animation onCreateDismissAnimation(int width, int height) {
+        return null;
+    }
+
+    protected Animator onCreateDismissAnimator(int width, int height) {
+        return null;
+    }
 
     protected View inflateView(ViewGroup parent, @LayoutRes int layoutId) {
         return LayoutInflater.from(parent.getContext()).inflate(layoutId, parent, false);

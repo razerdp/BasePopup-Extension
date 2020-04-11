@@ -17,7 +17,9 @@
     <style name="AppTheme" parent="AppTheme.Base">
         <!-- 自定义 -->
     </style>
-
+    <style name="AppTheme.FUllScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
     <style name="animation_translucent_translate" parent="@android:style/Animation">
         <item name="android:activityOpenEnterAnimation">@anim/slide_left_in</item>
         <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>

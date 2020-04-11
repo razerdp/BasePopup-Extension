@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    ios alert-->
+    <dimen name="be_ios_alert_title">16sp</dimen>
+    <dimen name="be_ios_alert_message">12sp</dimen>
+    <dimen name="be_ios_alert_button_text_size">14sp</dimen>
     <dimen name="be_ios_divider_width">0.5dp</dimen>
+    <dimen name="be_ios_corner_radius">12dp</dimen>
 </resources>

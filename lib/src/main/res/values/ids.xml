@@ -3,6 +3,7 @@
     <!--    ios alert-->
     <item name="be_alert_ios_title" type="id" />
     <item name="be_alert_ios_message" type="id" />
+    <item name="be_alert_ios_layout_button" type="id" />
     <item name="be_alert_ios_btn_positive" type="id" />
     <item name="be_alert_ios_btn_neutral" type="id" />
     <item name="be_alert_ios_btn_negative" type="id" />

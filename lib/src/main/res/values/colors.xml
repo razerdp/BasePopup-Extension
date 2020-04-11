@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="be_divider_color">#e6edf0</color>
-    <color name="be_alert_ios_positive_text_color">#4169E1</color>
-
+    <!--    ios alert-->
+    <color name="be_alert_ios_divider_color">#C8C7CC</color>
+    <color name="be_alert_ios_background_color">#ccffffff</color>
+    <color name="be_alert_ios_text_blue">#007AFF</color>
+    <color name="be_alert_ios_text_red">#FF3B30</color>
+    <color name="be_alert_ios_press_color">#bfffffff</color>
 </resources>

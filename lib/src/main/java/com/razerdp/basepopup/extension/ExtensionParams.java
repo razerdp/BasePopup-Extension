@@ -14,6 +14,9 @@ public abstract class ExtensionParams {
     protected Object windowParent;
     protected BasePopupWindowExtension cachedPopup;
 
+    protected ExtensionParams() {
+    }
+
     public ExtensionParams(Context context) {
         this.windowParent = context;
     }
@@ -34,4 +37,7 @@ public abstract class ExtensionParams {
     @NonNull
     protected abstract BasePopupWindowExtensionAdapter getExtensionAdapter();
 
+    public static class DefaultConfig {
+
+    }
 }

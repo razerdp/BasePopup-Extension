@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
+    android:layout_marginTop="36dp"
+    android:layout_marginBottom="36dp"
     android:background="@drawable/be_alert_ios_bg"
     android:orientation="vertical">
 
@@ -11,33 +13,37 @@
         android:id="@id/be_alert_ios_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:gravity="center"
-        android:padding="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:text="先乱写，后面再查询具体的值" />
+        tools:text="Alert" />
 
     <TextView
         android:id="@id/be_alert_ios_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:lineSpacingExtra="1.5dp"
-        android:lineSpacingMultiplier="1.5"
-        android:padding="12dp"
+        android:lineSpacingExtra="1.2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         android:textColor="@android:color/black"
         android:textSize="12sp"
-        tools:text="先乱写，后面再查询具体的值\n先乱写，后面再查询具体的值\n先乱写，后面再查询具体的值" />
+        tools:text="Here is a message where we can put absolutely anything we want." />
 
     <View
-        style="@style/divider_horizontal"
+        style="@style/be_ios_divider_horizontal"
         android:layout_marginTop="12dp" />
 
     <LinearLayout
+        android:id="@id/be_alert_ios_layout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@drawable/be_vertical_divider"
+        android:divider="@color/be_alert_ios_divider_color"
         android:orientation="horizontal"
         android:showDividers="middle">
 
@@ -46,11 +52,12 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/be_alert_ios_selector_bottom_left"
             android:gravity="center"
-            android:padding="12dp"
-            android:textColor="@color/be_alert_ios_positive_text_color"
-            android:textSize="14sp"
-            tools:text="确定" />
+            android:padding="7dp"
+            android:textColor="@color/be_alert_ios_text_red"
+            android:textSize="@dimen/be_ios_alert_button_text_size"
+            tools:text="Cancel" />
 
         <TextView
             android:id="@id/be_alert_ios_btn_neutral"
@@ -58,9 +65,10 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:padding="12dp"
-            android:textColor="@color/be_alert_ios_positive_text_color"
-            android:textSize="14sp"
+            android:padding="7dp"
+            android:textColor="@color/be_alert_ios_text_blue"
+            android:textSize="@dimen/be_ios_alert_button_text_size"
+            android:visibility="gone"
             tools:text="中立" />
 
 
@@ -69,11 +77,12 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@drawable/be_alert_ios_selector_bottom_right"
             android:gravity="center"
-            android:padding="12dp"
-            android:textColor="@color/be_alert_ios_positive_text_color"
-            android:textSize="14sp"
-            tools:text="取消" />
+            android:padding="7dp"
+            android:textColor="@color/be_alert_ios_text_blue"
+            android:textSize="@dimen/be_ios_alert_button_text_size"
+            tools:text="Ok" />
     </LinearLayout>
 
 
