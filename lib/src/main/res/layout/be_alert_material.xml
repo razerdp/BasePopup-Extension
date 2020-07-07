@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/be_alert_material_padding">
+
+    <TextView
+        android:id="@id/be_alert_material_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="@dimen/be_alert_material_padding"
+        android:paddingEnd="@dimen/be_alert_material_padding"
+        android:textColor="@color/be_alert_material_title_color"
+        android:textSize="@dimen/be_alert_material_title"
+        android:textStyle="bold"
+        tools:text="Alert" />
+
+    <TextView
+        android:id="@id/be_alert_material_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingExtra="1.2dp"
+        android:lineSpacingMultiplier="1.2"
+        android:paddingStart="@dimen/be_alert_material_padding"
+        android:paddingEnd="@dimen/be_alert_material_padding"
+        android:textColor="@color/be_alert_material_message_color"
+        android:textSize="@dimen/be_alert_material_message"
+        tools:text="Here is a message where we can put absolutely anything we want." />
+
+    <View
+        style="@style/be_ios_divider_horizontal"
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout
+        android:id="@id/be_alert_material_layout_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/be_alert_material_btn_negative"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/be_alert_material_selector_bottom_left"
+            android:gravity="center"
+            android:padding="7dp"
+            android:textColor="@color/be_alert_material_text_red"
+            android:textSize="@dimen/be_alert_material_button_text_size"
+            tools:text="Cancel" />
+
+        <TextView
+            android:id="@id/be_alert_material_btn_neutral"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="7dp"
+            android:textColor="@color/be_alert_material_text_blue"
+            android:textSize="@dimen/be_alert_material_button_text_size"
+            android:visibility="gone"
+            tools:text="中立" />
+
+
+        <TextView
+            android:id="@id/be_alert_material_btn_positive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/be_alert_material_selector_bottom_right"
+            android:gravity="center"
+            android:padding="7dp"
+            android:textColor="@color/be_alert_material_text_blue"
+            android:textSize="@dimen/be_alert_material_button_text_size"
+            tools:text="Ok" />
+    </LinearLayout>
+
+
+</LinearLayout>

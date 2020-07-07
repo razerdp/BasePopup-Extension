@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="be_default_color_primary">#008577</color>
+    <color name="be_default_color_primary_dark">#00574B</color>
+    <color name="be_default_color_secondary">#03DAC6</color>
+    <color name="be_default_color_secondary_variant">#018786</color>
+    <color name="be_default_colorAccent">#575757</color>
+
+
     <color name="be_divider_color">#e6edf0</color>
     <!--    ios alert-->
     <color name="be_alert_ios_divider_color">#C8C7CC</color>
@@ -7,4 +14,11 @@
     <color name="be_alert_ios_text_blue">#007AFF</color>
     <color name="be_alert_ios_text_red">#FF3B30</color>
     <color name="be_alert_ios_press_color">#bfffffff</color>
+
+    <!--    material alert-->
+    <!--    https://material.io/develop/android/components/dialogs/-->
+    <!--    https://material.io/develop/android/theming/color/-->
+    <color name="be_alert_material_title_color">#DD000000</color>
+    <color name="be_alert_material_message_color">#99000000</color>
+
 </resources>

@@ -7,5 +7,11 @@
     <item name="be_alert_ios_btn_positive" type="id" />
     <item name="be_alert_ios_btn_neutral" type="id" />
     <item name="be_alert_ios_btn_negative" type="id" />
-
+    <!--material alert-->
+    <item name="be_alert_material_title" type="id" />
+    <item name="be_alert_material_message" type="id" />
+    <item name="be_alert_material_layout_button" type="id" />
+    <item name="be_alert_material_btn_positive" type="id" />
+    <item name="be_alert_material_btn_neutral" type="id" />
+    <item name="be_alert_material_btn_negative" type="id" />
 </resources>

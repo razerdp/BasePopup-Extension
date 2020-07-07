@@ -3,7 +3,13 @@ package com.razerdp.basepopup.extension.alert;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Build;
 import android.view.View;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 
 import com.razerdp.basepopup.extension.BasePopupWindowExtensionAdapter;
 import com.razerdp.basepopup.extension.ExtensionParams;
@@ -12,11 +18,6 @@ import com.razerdp.basepopup.lib.R;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-
-import androidx.annotation.ColorInt;
-import androidx.annotation.IntDef;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 
 /**
  * Created by 大灯泡 on 2020/4/8.
@@ -221,7 +222,7 @@ public class AlertParams extends ExtensionParams {
 
     void onButtonClickInternal(@NonNull AlertPopupWindow popupWindow, @ButtonMode int mode, View v) {
         if (mOnClickListener != null) {
-            mOnClickListener.onAlertButtonClickInternal(popupWindow,mode, v);
+            mOnClickListener.onAlertButtonClickInternal(popupWindow, mode, v);
         }
     }
 
@@ -287,8 +288,27 @@ public class AlertParams extends ExtensionParams {
         }
     }
 
+    /**
+     * https://material.io/develop/android/components/dialogs/
+     * https://github.com/material-components/material-components-android/blob/master/docs/components/Button.md#text-label-attributes
+     */
     public static class DefaultMaterialAlertConfig extends AlertDefaultConfig<DefaultMaterialAlertConfig> {
         private static final AlertParams DEFAULT_PARAMS = new AlertParams();
+
+
+        DefaultMaterialAlertConfig() {
+            setDefaultTitleTextColor(UIHelper.getColor(R.color.be_alert_material_title_color));
+            setDefaultMessageTextColor(UIHelper.getColor(R.color.be_alert_material_message_color));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                setDefaultPositiveTextColor(UIHelper.getThemeColor(android.R.attr.colorPrimary));
+                setDefaultNeutralTextColor(UIHelper.getThemeColor(android.R.attr.colorPrimary));
+                setDefaultNegativeTextColor(UIHelper.getThemeColor(android.R.attr.colorPrimary));
+            } else {
+                setDefaultPositiveTextColor(UIHelper.getColor(R.color.be_default_color_primary));
+                setDefaultNeutralTextColor(UIHelper.getColor(R.color.be_default_color_primary));
+                setDefaultNegativeTextColor(UIHelper.getColor(R.color.be_default_color_primary));
+            }
+        }
 
         @NonNull
         @Override

@@ -12,7 +12,7 @@ import com.razerdp.basepopup.extension.demo.base.baseadapter.MultiType;
 import com.razerdp.basepopup.extension.demo.base.baseadapter.OnItemClickListener;
 import com.razerdp.basepopup.extension.demo.fun.FunContent;
 import com.razerdp.basepopup.extension.demo.fun.FunTitle;
-import com.razerdp.basepopup.extension.demo.fun.alert.FunIOSAlert;
+import com.razerdp.basepopup.extension.demo.fun.alert.FunAlert;
 import com.razerdp.basepopup.extension.demo.utils.ButterKnifeUtil;
 import com.razerdp.basepopup.extension.demo.utils.UIHelper;
 import com.razerdp.basepopup.extension.demo.widget.DPRecyclerView;
@@ -74,7 +74,7 @@ public class DemoActivity extends BaseActivity {
     private List<MultiType> createItem() {
         List<MultiType> result = new ArrayList<>();
         result.add(new FunTitle("弹窗"));
-        result.add(new FunIOSAlert());
+        result.add(new FunAlert());
 
         return result;
     }

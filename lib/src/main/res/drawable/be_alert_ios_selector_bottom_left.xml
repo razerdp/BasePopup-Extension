@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <corners android:bottomLeftRadius="@dimen/be_ios_corner_radius" />
+            <corners android:bottomLeftRadius="@dimen/be_alert_ios_corner_radius" />
             <solid android:color="@color/be_alert_ios_press_color" />
         </shape>
     </item>
