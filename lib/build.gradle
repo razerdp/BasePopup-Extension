@@ -26,8 +26,8 @@ ext {
 }
 
 dependencies {
-    compileOnly 'androidx.appcompat:appcompat:1.1.0'
-    compileOnly 'com.github.razerdp:BasePopup_Candy:2.2.4.0705'
+    compileOnly 'androidx.appcompat:appcompat:1.3.0'
+    compileOnly "io.github.razerdp:BasePopup:$rootProject.ext.basepopup_version"
 }
 
 apply from: "$rootProject.rootDir/scripts/upload.gradle"

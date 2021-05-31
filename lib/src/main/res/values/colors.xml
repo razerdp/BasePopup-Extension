@@ -16,9 +16,11 @@
     <color name="be_alert_ios_press_color">#bfffffff</color>
 
     <!--    material alert-->
-    <!--    https://material.io/develop/android/components/dialogs/-->
-    <!--    https://material.io/develop/android/theming/color/-->
+    <!--    https://material.io/components/dialogs#alert-dialog-->
+    <color name="be_alert_material_background_color">#ffffff</color>
     <color name="be_alert_material_title_color">#DD000000</color>
     <color name="be_alert_material_message_color">#99000000</color>
+    <color name="be_alert_material_text_red">#d32f2f</color>
+    <color name="be_alert_material_text_blue">#6200ee</color>
 
 </resources>

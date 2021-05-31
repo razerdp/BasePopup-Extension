@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.razerdp.basepopup.extension.demo.widget.TitleBarView
+    <razerdp.basepopup.extension.demo.widget.TitleBarView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title_text="常见例子" />
 
 
-    <com.razerdp.basepopup.extension.demo.widget.DPRecyclerView
+    <razerdp.basepopup.extension.demo.widget.DPRecyclerView
         android:id="@+id/rv_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

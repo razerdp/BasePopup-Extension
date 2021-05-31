@@ -8,7 +8,7 @@
     android:background="@drawable/bg_titlebar"
     android:orientation="vertical">
 
-    <com.razerdp.basepopup.extension.demo.widget.StatusBarViewPlaceHolder
+    <razerdp.basepopup.extension.demo.widget.StatusBarViewPlaceHolder
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

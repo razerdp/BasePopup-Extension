@@ -4,17 +4,16 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:background="@android:color/white"
-    android:orientation="vertical"
-    android:padding="@dimen/be_alert_material_padding">
+    android:background="@drawable/be_alert_material_bg"
+    android:orientation="vertical">
 
     <TextView
         android:id="@id/be_alert_material_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingStart="@dimen/be_alert_material_padding"
-        android:paddingEnd="@dimen/be_alert_material_padding"
+        android:layout_marginStart="@dimen/be_alert_material_padding"
+        android:layout_marginTop="@dimen/be_alert_material_padding"
+        android:layout_marginEnd="@dimen/be_alert_material_padding"
         android:textColor="@color/be_alert_material_title_color"
         android:textSize="@dimen/be_alert_material_title"
         android:textStyle="bold"
@@ -24,42 +23,39 @@
         android:id="@id/be_alert_material_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:lineSpacingExtra="1.2dp"
-        android:lineSpacingMultiplier="1.2"
-        android:paddingStart="@dimen/be_alert_material_padding"
-        android:paddingEnd="@dimen/be_alert_material_padding"
+        android:layout_marginStart="@dimen/be_alert_material_padding"
+        android:layout_marginTop="@dimen/be_alert_material_vertical_padding"
+        android:layout_marginEnd="@dimen/be_alert_material_padding"
+        android:lineSpacingExtra="1.4dp"
+        android:lineSpacingMultiplier="1.4"
         android:textColor="@color/be_alert_material_message_color"
         android:textSize="@dimen/be_alert_material_message"
         tools:text="Here is a message where we can put absolutely anything we want." />
-
-    <View
-        style="@style/be_ios_divider_horizontal"
-        android:layout_marginTop="12dp" />
 
     <LinearLayout
         android:id="@id/be_alert_material_layout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/be_alert_material_vertical_padding"
+        android:gravity="right"
         android:orientation="horizontal">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@id/be_alert_material_btn_negative"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/be_alert_material_selector_bottom_left"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="7dp"
             android:textColor="@color/be_alert_material_text_red"
             android:textSize="@dimen/be_alert_material_button_text_size"
             tools:text="Cancel" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@id/be_alert_material_btn_neutral"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="7dp"
             android:textColor="@color/be_alert_material_text_blue"
@@ -68,12 +64,11 @@
             tools:text="中立" />
 
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@id/be_alert_material_btn_positive"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/be_alert_material_selector_bottom_right"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="7dp"
             android:textColor="@color/be_alert_material_text_blue"

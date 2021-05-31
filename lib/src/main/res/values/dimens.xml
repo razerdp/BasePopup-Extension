@@ -10,11 +10,12 @@
     <!--    material alert-->
     <!--    https://material.io/develop/android/components/dialogs/-->
     <!--    https://material.io/develop/android/theming/typography/-->
-    <dimen name="be_alert_material_title">16sp</dimen>
+    <dimen name="be_alert_material_title">18sp</dimen>
     <dimen name="be_alert_material_message">14sp</dimen>
     <!--    https://github.com/material-components/material-components-android/blob/master/docs/components/Button.md#text-label-attributes-->
     <dimen name="be_alert_material_button_text_size">14sp</dimen>
     <dimen name="be_alert_material_padding">24dp</dimen>
-
+    <dimen name="be_alert_material_vertical_padding">16dp</dimen>
+    <dimen name="be_alert_material_corner_radius">6dp</dimen>
 
 </resources>

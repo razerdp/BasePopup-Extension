@@ -9,7 +9,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath 'com.android.tools.build:gradle:4.2.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
 
@@ -20,6 +20,8 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url 'https://s01.oss.sonatype.org/content/repositories/snapshots' } // snapshot仓库（如果需要snapshot依赖，请配置该maven）
+
         maven { url "https://raw.githubusercontent.com/Pgyer/mvn_repo_pgyer/master" }
         maven { url "https://maven.google.com" }
         maven { url "https://jitpack.io" }
@@ -48,6 +50,7 @@ ext {
     targetSdkVersion = 29
     versionCode = 1
     versionName = '1.0.0'
+    basepopup_version = '3.1.0-SNAPSHOT'
 
     candy = true
     group = 'com.github.razerdp'
